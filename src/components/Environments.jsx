@@ -83,24 +83,6 @@ export const Environments = () => {
           <Rtanny />
         </Physics>
       </Suspense>
-
-      <EffectComposer>
-        <HueSaturation
-          blendFunction={BlendFunction.NORMAL}
-          hue={0}
-          saturation={0}
-        />
-        <BrightnessContrast
-          brightness={-0.1} // brightness. min: -1, max: 1
-          contrast={0.2} // contrast: min -1, max: 1
-        />
-        {isEditMode ? (
-          <Noise
-            premultiply // enables or disables noise premultiplication
-            blendFunction={BlendFunction.ADD} // blend mode
-          />
-        ) : null}
-      </EffectComposer>
     </>
   );
 };

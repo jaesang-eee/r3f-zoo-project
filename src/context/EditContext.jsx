@@ -205,7 +205,6 @@ const data = [
   },
   {
     id: crypto.randomUUID(),
-    id: crypto.randomUUID(),
     name: "TRex",
     type: "dino",
     position: [-20, START_Y, 18],
