@@ -35,8 +35,6 @@ export const Environments = () => {
     }
   });
 
-  const lightRef = useRef();
-  useHelper(lightRef, THREE.DirectionalLightHelper);
   return (
     <>
       {isEditMode ? (
@@ -46,16 +44,15 @@ export const Environments = () => {
           position={[0, START_Y, 0]}
         />
       ) : null}
-      <ambientLight intensity={4} />
+      <ambientLight intensity={2} />
       <directionalLight
         shadow-camera-top={100}
         shadow-camera-bottom={-100}
         shadow-camera-right={100}
         shadow-camera-left={-100}
         shadow-mapSize={[5000, 5000]}
-        ref={lightRef}
         castShadow
-        intensity={4}
+        intensity={2}
         position={[162, 10, 102]}
         target-position={[160, 0, 100]}
       />

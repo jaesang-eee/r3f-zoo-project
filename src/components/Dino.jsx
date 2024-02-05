@@ -21,7 +21,7 @@ export const Dino = ({ name, objectId, position, onClick, ...props }) => {
   const isSelected = objectId === selectedId;
 
   useFrame((state) => {
-    if (isSelected) {
+    if (isSelected && !isEditMode) {
       const [offestX, offestY, offsetZ] = position;
 
       const { x, y, z } = group.current.children[0].position;

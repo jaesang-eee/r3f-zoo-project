@@ -20,7 +20,7 @@ export const Animal = ({ name, objectId, onClick, position, ...props }) => {
   }, []);
 
   useFrame((state) => {
-    if (isSelected) {
+    if (isSelected && !isEditMode) {
       const [offestX, offestY, offsetZ] = position;
 
       const { x, y, z } = group.current.children[0].position;
